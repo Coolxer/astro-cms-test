@@ -19,6 +19,8 @@ import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro'
 
+import netlify from '@astrojs/netlify';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -80,4 +82,6 @@ export default defineConfig({
       },
     },
   },
+
+  adapter: netlify(),
 });
